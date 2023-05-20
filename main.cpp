@@ -45,7 +45,7 @@ public:
     void AddCommand( string&& cmd )
     {
         commands.push_back( move( cmd ) );
-        if( commands.size() == max_size )
+        if( static_cast<int>( commands.size() ) == max_size )
         {
             Stop();
         }
